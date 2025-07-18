@@ -21,8 +21,12 @@ function checkVariablelength(variable:string,min:number,max:number):void{
     }
 }
 function symbolIncluded(variable:string, firstSymbol:string=".", secondSymbol:string="@"):void {
+    const regularEmail = /^[^@.\s][^@\s]*@[^@.\s]+(\.[^@.\s]+)+$/;
     if(!variable.includes(firstSymbol) || !variable.includes(secondSymbol)){
         throw new Error("Your email don't includes symbol '@' or '.' ")
+    }
+    else if(!regularEmail.test(variable)) {
+        throw new Error("Your email was typed wrongly ")
     }
 }
 function checkContext(variable:string):void {
