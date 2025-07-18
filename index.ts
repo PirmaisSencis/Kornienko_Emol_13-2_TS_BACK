@@ -1,6 +1,6 @@
 import promptSync from 'prompt-sync';
 const prompt = promptSync();
-//TASK 1
+// TASK 1
 const email:string = String(prompt("Enter your email "))
 const password:string = String(prompt("Enter your password "))
 const birthdayYear:string = String(prompt("Enter your year of birthday "))
@@ -68,12 +68,11 @@ catch (error: any) {
 // const userPhoneNumber:string = String(prompt("Enter your phone number ")).trim()
 // const userPostIndex:string = String(prompt("Enter your post index "))
 // const userPayment:string = String(prompt("Enter the type of payment ")).trim().toLowerCase()
-// type Payment = "card" | "paypal" | "cash"
 // type Order = {
 //     name:string,
 //     phoneNumber:string,
 //     postIndex:string,
-//     payment:Payment
+//     payment:string
 // }
 
 // function nameValidation(name:string):void {
@@ -92,11 +91,13 @@ catch (error: any) {
 //     throw new Error("Your post index is wrong ")
 //   }
 // }
-// function paymentMethodValidation(method: string):asserts method is Payment {
-//   const validMethods: Payment[] = ["card", "paypal", "cash"];
-//   if (!validMethods.includes(method as Payment)) {
-//     throw new Error("Invalid payment method. Use: card, paypal or cash ")
-//   }
+// function paymentMethodValidation(method:string):string {
+//   if (method === "card" || method === "paypal" || method === "cash") {
+//     return method
+// }
+// else {
+//     return null
+// }
 // }
 
 // try {
